@@ -6,18 +6,18 @@ public class Main {
         Perpustakaan perpus = new Perpustakaan();
         boolean jalan = true;
 
-        // Memasukkan 3 data awal Buku sesuai permintaan
+
         perpus.tambahBuku(new Buku("B001", "Laut Bercerita", "Leila S. Chudori", 5));
         perpus.tambahBuku(new Buku("B002", "Janji", "Tere Liye", 4));
         perpus.tambahBuku(new Buku("B003", "Bumi Manusia", "Pramoedya Ananta Toer", 3));
 
         // Memasukkan 4 data awal Anggota
-        perpus.tambahAnggota(new Anggota("A001", "Andi", "08111222333"));
-        perpus.tambahAnggota(new Anggota("A002", "Bina", "08222333444"));
-        perpus.tambahAnggota(new Anggota("A003", "Citra", "08333444555"));
-        perpus.tambahAnggota(new Anggota("A004", "Doni", "08444555666"));
+        perpus.tambahAnggota(new Anggota("A001", "fajar", "08111222333"));
+        perpus.tambahAnggota(new Anggota("A002", "awal", "08222333444"));
+        perpus.tambahAnggota(new Anggota("A003", "jauhar", "08333444555"));
+        perpus.tambahAnggota(new Anggota("A004", "ibnu", "08444555666"));
 
-        System.out.println("=========================================");
+
         System.out.println("  SELAMAT DATANG DI SISTEM PERPUSTAKAAN  ");
         System.out.println("=========================================");
 
@@ -31,7 +31,7 @@ public class Main {
             System.out.print("Pilih menu (1-5): ");
 
             int pilihan = input.nextInt();
-            input.nextLine(); // Membersihkan sisa enter (newline)
+            input.nextLine();
 
             switch (pilihan) {
                 case 1:
@@ -45,15 +45,15 @@ public class Main {
                     System.out.print("Masukkan ID Transaksi : ");
                     String idTrans = input.nextLine();
 
-                    // Simulasi menggunakan data buku pertama dan anggota pertama
-                    System.out.println("Menggunakan Anggota Default: Andi (A001)");
+
+                    System.out.println("Menggunakan Anggota Default: fajar (A001)");
                     System.out.println("Menggunakan Buku Default: Laut Bercerita (B001)");
                     System.out.print("Masukkan Tanggal (DD/MM/YYYY): ");
                     String tgl = input.nextLine();
 
                     // Mengambil objek dummy dari index 0 untuk simulasi
                     Buku bukuDipinjam = new Buku("B001", "Laut Bercerita", "Leila S. Chudori", 5);
-                    Anggota peminjam = new Anggota("A001", "Andi", "08111222333");
+                    Anggota peminjam = new Anggota("A001", "fajar", "08111222333");
 
                     perpus.prosesPeminjaman(idTrans, bukuDipinjam, peminjam, tgl);
                     break;
